@@ -1,6 +1,6 @@
 {
   "name": "usmonaliyev/redium",
-  "description": "-",
+  "description": "A high-performance laravel package powered by redis, inspired by sanctum.",
   "keywords": [
     "usmonaliyev",
     "laravel",
