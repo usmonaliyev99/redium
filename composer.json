@@ -1,6 +1,6 @@
 {
   "name": "usmonaliyev/redium",
-  "description": "A high-performance laravel package powered by redis, inspired by sanctum.",
+  "description": "A high-performance laravel auth package powered by redis, inspired by sanctum.",
   "keywords": [
     "usmonaliyev",
     "laravel",
@@ -20,7 +20,7 @@
     }
   ],
   "require": {
-    "php": "^8.4",
+    "php": "^8.2",
     "illuminate/auth": "^10|^11|^12",
     "illuminate/contracts": "^10|^11|^12",
     "illuminate/http": "^10|^11|^12",
