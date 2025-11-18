@@ -1,6 +1,6 @@
 # Configuration
 
-## Change database connection
+## 🔧 Change database connection
 
 By default, token will be created in 0 database of Redis server.
 
@@ -49,7 +49,7 @@ After creating connection, you can change Redium connection in `config/redium.ph
 
 Then it stores and reads tokens from 9 database.
 
-## Change default ttl
+## ⌛ Change default ttl
 
 If you do not give `expiresAt` during creating token, Redium takes default `ttl` (Time to Live).
 If it is null, token won't expire.

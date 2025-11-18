@@ -10,23 +10,23 @@ This secure token-based authentication system like [Sanctum](https://github.com/
 - No SQL tables.
 - No migrations.
 
-## Summary
+## 🧩 Summary
 
 - API-focused
 - Fast Redis-based token storage
 - Same security model as Sanctum
-- Automatic token expiration
+- Automatic token expiration powered by Redis
 - Fastest rule management
 - No database queries
 - Revoking tokens
 
-## Requirements
+## 📦 Requirements
 
-* PHP 8.4+
+* PHP 8.2+
 * Laravel 10+
 * Redis server
 
-## Why Redium?
+## ❓ Why Redium?
 
 When I'm new in [Laravel](https://laravel.com), I managed auth with Sanctum.
 
@@ -45,7 +45,7 @@ After all of that I decided to implement my own, [that](https://github.com/usmon
 package for auth.
 In real word it works very good, but it has mistakes.
 
-## Solution
+## 💡 Solution
 
 Why did I name it Redium?
 

@@ -1,6 +1,6 @@
 # Quick start
 
-## Register trait
+## 🔗 Register trait
 
 To begin your User model should use the `Laravel\Sanctum\HasApiTokens` trait:
 
@@ -20,9 +20,11 @@ class User extends Authenticatable
 }
 ```
 
+You should add `id` to fillable property, it is important.
+
 Please add your columns to `fillable` that you want to get when you use `auth()->user()` or `Auth::user()`.
 
-## Register guard
+## 🛡️ Register guard
 
 Register redium guard in your `config/auth.php` file:
 
@@ -39,7 +41,7 @@ Register redium guard in your `config/auth.php` file:
 ],
 ```
 
-## Create new token
+## 🔑 Create new token
 
 To create new token, you may use `createToken` method. API tokens are hashed using SHA-256 hashing before being stored
 in Redis database.
@@ -58,7 +60,7 @@ Route::post('/create-token', function (Request $request) {
 });
 ```
 
-## Protect your routes
+## 🔐 Protect your routes
 
 Take plain token and send request with `Authorization: Bearer $plainTextToken` header.
 
