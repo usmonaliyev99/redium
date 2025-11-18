@@ -2,6 +2,7 @@
 
 namespace Usmonaliyev\Redium\Traits;
 
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
 use Usmonaliyev\Redium\Data\AccessToken;
 use Usmonaliyev\Redium\Data\Record;
@@ -35,7 +36,7 @@ trait HasRediumTokens
     /**
      * Create a new personal access token for the user.
      */
-    public function createToken(string $name, array $abilities = ['*'], ?string $expiresAt = null): AccessToken
+    public function createToken(string $name, array $abilities = ['*'], ?Carbon $expiresAt = null): AccessToken
     {
         $plainTextToken = $this->generateTokenString();
 
