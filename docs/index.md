@@ -1,6 +1,6 @@
 # Introduction
 
-This page is full documentation of [Redium]() package.
+This page is full documentation of [Redium](https://usmonaliyev99.github.io/redium/) package.
 
 Redium is high-performance authentication package specifically for API.
 This secure token-based authentication system like [Sanctum](https://github.com/laravel/sanctum), but main difference.
