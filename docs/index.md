@@ -5,7 +5,7 @@ This page is full documentation of [Redium](https://usmonaliyev99.github.io/redi
 Redium is high-performance authentication package specifically for API.
 This secure token-based authentication system like [Sanctum](https://github.com/laravel/sanctum), but main difference.
 
-**Everything is stored in Redis.**
+Everything is stored in Redis.
 
 - No SQL tables.
 - No migrations.
