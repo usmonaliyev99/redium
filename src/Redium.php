@@ -125,6 +125,9 @@ class Redium implements Arrayable, JsonSerializable
         $tokens = [];
         foreach ($hashedTokens as $token) {
             $state = self::redis()->hgetall("tokens:{$token}");
+            if (empty($state)) {
+                continue;
+            }
 
             $record = Record::with()
                 ->setToken($token)
@@ -176,7 +179,7 @@ class Redium implements Arrayable, JsonSerializable
             'user' => $this->auth,
             'token' => $this->token,
             'abilities' => $this->abilities,
-            'expires_at' => $this->expiresAt,
+            'expires_at' => $this->expiresAt?->format('Y-m-d H:i:s'),
         ];
     }
 

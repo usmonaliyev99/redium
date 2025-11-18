@@ -71,16 +71,16 @@ class Record
         return $this;
     }
 
-    public function setExpiresAt(?Carbon $expiresAt = null): Record
+    public function setExpiresAt(?string $expiresAt = null): Record
     {
-        if (is_null($expiresAt)) {
+        if (! $expiresAt) {
             $ttl = config('redium.ttl');
             $this->expiresAt = $ttl ? Carbon::now()->addMinutes($ttl) : null;
 
             return $this;
         }
 
-        $this->expiresAt = $expiresAt;
+        $this->expiresAt = Carbon::parse($expiresAt);
 
         return $this;
 
