@@ -1,6 +1,6 @@
 # Configuration
 
-## 🔧 Change database connection
+## 🔧 Change default connection
 
 By default, token will be created in 0 database of Redis server.
 
