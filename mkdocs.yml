@@ -2,9 +2,12 @@ site_name: Redium
 site_description: A high-performance laravel auth package powered by redis, inspired by sanctum.
 site_author: Usmonaliyev Temur
 
+site_url: https://usmonaliyev99.github.io/redium/
 repo_url: https://github.com/usmonaliyev99/redium
 
+
 theme:
+  locale: en
   name: material
 
 nav:
