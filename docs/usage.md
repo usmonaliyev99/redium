@@ -46,11 +46,11 @@ When handling incoming request authenticated by Redium, you may determine if tok
 `tokenCan` or `tokenCant` methods:
 
 ```php
-if ($user->tokenCan('server:update')) {
+if ($user->tokenCan('users.show')) {
     // ...
 }
 
-if ($user->tokenCant('server:update')) {
+if ($user->tokenCant('users.delete')) {
     // ...
 }
 ```
@@ -73,9 +73,7 @@ You may "revoke" tokens by deleting them from Redis server using `tokens` functi
 ```php
 $tokens = $user->tokens();
 
-foreach ($tokens as $token) {
-    $token->delete();
-}
+array_map(fn ($token) => $token->delete(), $tokens);
 ```
 
 If you want to sign out all sessions, you have to delete them one by one.
@@ -101,3 +99,6 @@ Route::middleware('auth:redium')->group(function () {
     ...
 })
 ```
+
+If error is coming out like "Auth guard [redium] is not defined.", go to `config/auth.php` file and register `redium`
+guard.
